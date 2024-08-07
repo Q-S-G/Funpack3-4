@@ -1,0 +1,2 @@
+../lwip/src/netif/ethernet.c:82:1:ethernet_input	32	static
+../lwip/src/netif/ethernet.c:271:1:ethernet_output	32	static

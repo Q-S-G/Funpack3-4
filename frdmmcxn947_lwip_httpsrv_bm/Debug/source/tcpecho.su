@@ -1,0 +1,3 @@
+../source/tcpecho.c:13:15:tcpecho_recv	24	static
+../source/tcpecho.c:37:15:tcpecho_accept	24	static
+../source/tcpecho.c:45:7:TCP_Echo_Init	16	static

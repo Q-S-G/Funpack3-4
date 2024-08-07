@@ -1,0 +1,8 @@
+D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_httpsrv_bm\drivers/fsl_clock.h:1394:20:CLOCK_EnableClock	24	static
+D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_httpsrv_bm\drivers/fsl_gpio.h:329:20:GPIO_PinWrite	24	static
+../source/lwip_httpsrv_bm.c:125:13:MDIO_Init	8	static
+../source/lwip_httpsrv_bm.c:131:17:MDIO_Write	16	static
+../source/lwip_httpsrv_bm.c:136:17:MDIO_Read	16	static
+../source/lwip_httpsrv_bm.c:167:6:SysTick_Handler	8	static
+../source/lwip_httpsrv_bm.c:172:6:Led_Init	8	static
+../source/lwip_httpsrv_bm.c:182:5:main	136	static

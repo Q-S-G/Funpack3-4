@@ -1,0 +1,4 @@
+../lwip/src/core/ipv4/icmp.c:81:1:icmp_input	64	static
+../lwip/src/core/ipv4/icmp.c:310:1:icmp_dest_unreach	16	static
+../lwip/src/core/ipv4/icmp.c:325:1:icmp_time_exceeded	16	static
+../lwip/src/core/ipv4/icmp.c:342:1:icmp_send_response	56	static

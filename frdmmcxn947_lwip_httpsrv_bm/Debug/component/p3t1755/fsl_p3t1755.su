@@ -1,0 +1,4 @@
+../component/p3t1755/fsl_p3t1755.c:20:10:P3T1755_WriteReg	40	static
+../component/p3t1755/fsl_p3t1755.c:28:10:P3T1755_ReadReg	40	static
+../component/p3t1755/fsl_p3t1755.c:36:10:P3T1755_Init	16	static
+../component/p3t1755/fsl_p3t1755.c:50:10:P3T1755_ReadTemperature	24	static

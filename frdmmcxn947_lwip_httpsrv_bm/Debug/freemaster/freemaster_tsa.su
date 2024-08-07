@@ -1,0 +1,2 @@
+../freemaster/freemaster_tsa.c:505:12:FMSTR_SetUpTsaBuff	16	static
+../freemaster/freemaster_tsa.c:512:12:FMSTR_TsaAddVar	24	static
