@@ -17,6 +17,8 @@
 
 extern double temp;
 extern int touch_flag;
+extern int key_flag;
+int key_switch;
 int touch_flag_last;
 int temp_flag;
 double temp_here;
@@ -136,10 +138,25 @@ char temp_on[] = "temp:1\n\r",
     	 struct tcp_pcb *pcb;
     	 for (pcb = tcp_active_pcbs; pcb != NULL; pcb = pcb->next)
     	 {
-    		 sprintf(str_send,"Info:%.2f,%d\r\n",temp_here,touch_flag);
+    		 sprintf(str_send,"Info:%.2f,%d,%d\r\n",temp_here,touch_flag,key_switch);
     		 tcp_write(pcb, str_send, sizeof(str_send), 1);
     	 }
     	 touch_flag_last = touch_flag;
+     }
+ }
+
+ void TCP_Key_Task(void)
+ {
+     if(key_flag)
+     {
+    	 key_switch = !key_switch;
+    	 key_flag = 0;
+    	 struct tcp_pcb *pcb;
+    	 for (pcb = tcp_active_pcbs; pcb != NULL; pcb = pcb->next)
+    	 {
+    		 sprintf(str_send,"Info:%.2f,%d,%d\r\n",temp_here,touch_flag,key_switch);
+    		 tcp_write(pcb, str_send, sizeof(str_send), 1);
+    	 }
      }
  }
 
@@ -151,7 +168,7 @@ char temp_on[] = "temp:1\n\r",
 	     	 struct tcp_pcb *pcb;
 	     	 for (pcb = tcp_active_pcbs; pcb != NULL; pcb = pcb->next)
 	     	 {
-	    		sprintf(str_send,"Info:%.2f,%d\r\n",temp_here,touch_flag);
+	    		sprintf(str_send,"Info:%.2f,%d,%d\r\n",temp_here,touch_flag,key_switch);
 	    		tcp_write(pcb, str_send, sizeof(str_send), 1);
 	     	 }
 	     	SDK_DelayAtLeastUs(100000, CLOCK_GetCoreSysClkFreq());

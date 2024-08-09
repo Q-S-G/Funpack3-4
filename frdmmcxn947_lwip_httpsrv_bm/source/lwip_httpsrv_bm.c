@@ -119,6 +119,8 @@ double temp;
 
 extern int touch_flag;
 
+int b;
+
 /*******************************************************************************
  * Code
  ******************************************************************************/
@@ -284,6 +286,8 @@ int main(void)
         temp = temperature_read();
 
         TCP_Touch_Task();
+
+        TCP_Key_Task();
 
         TCP_Temp_Task();
     }

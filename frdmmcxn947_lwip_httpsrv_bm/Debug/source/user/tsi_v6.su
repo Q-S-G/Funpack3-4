@@ -1,4 +1,5 @@
 D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_httpsrv_bm\CMSIS/core_cm33.h:2390:22:__NVIC_EnableIRQ	16	static
+D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_httpsrv_bm\drivers/fsl_gpio.h:411:24:GPIO_PinRead	16	static
 D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_httpsrv_bm\drivers/fsl_tsi_v6.h:791:20:TSI_EnableModule	16	static
 D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_httpsrv_bm\drivers/fsl_tsi_v6.h:838:20:TSI_EnableHardwareTriggerScan	16	static
 D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_httpsrv_bm\drivers/fsl_tsi_v6.h:871:20:TSI_SetSelfCapMeasuredChannel	16	static
@@ -7,5 +8,5 @@ D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_httpsrv_bm\drivers/fsl_
 D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_httpsrv_bm\drivers/fsl_tsi_v6.h:1004:20:TSI_EnableNoiseCancellation	16	static
 D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_httpsrv_bm\drivers/fsl_lptmr.h:305:20:LPTMR_SetTimerPeriod	16	static
 D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_httpsrv_bm\drivers/fsl_lptmr.h:349:20:LPTMR_StartTimer	24	static
-../source/user/tsi_v6.c:21:6:TSI_END_OF_SCAN_IRQHandler	8	static
-../source/user/tsi_v6.c:51:6:Tsi_Init	40	static
+../source/user/tsi_v6.c:23:6:TSI_END_OF_SCAN_IRQHandler	8	static
+../source/user/tsi_v6.c:67:6:Tsi_Init	40	static

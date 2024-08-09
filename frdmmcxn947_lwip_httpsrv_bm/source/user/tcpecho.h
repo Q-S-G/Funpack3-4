@@ -5,6 +5,7 @@
 
  void TCP_Echo_Init(void);
  void TCP_Touch_Task(void);
+ void TCP_Key_Task(void);
  void TCP_Temp_Task(void);
 
  #endif

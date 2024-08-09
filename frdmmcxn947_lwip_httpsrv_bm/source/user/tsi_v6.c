@@ -14,6 +14,8 @@ static volatile bool s_touchDetected = false;
 #endif
 
 int touch_flag = 0;
+int key_flag = 0;
+int key = 0;
 
 /*******************************************************************************
  * Code
@@ -41,6 +43,20 @@ void TSI0_IRQHandler(void)
         	touch_flag = 0;
             s_touchDetected = false; // 触摸结束，清除标志
         }
+    }
+
+    if(!GPIO_PinRead(BOARD_INITPINS_SW3_GPIO ,BOARD_INITPINS_SW3_GPIO_PIN))
+    {
+    	if(!key)
+    	{
+    		key_flag = 1;
+    		key = 1;
+    	}
+    }
+    else
+    {
+    	key_flag = 0;
+    	key = 0;
     }
 
     /* Clear endOfScan flag */

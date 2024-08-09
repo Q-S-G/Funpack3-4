@@ -88,6 +88,20 @@ void BOARD_InitBootPins(void);
 #define BOARD_INITPINS_LED_BLUE_PIN_MASK (1U << 2U)      /*!<@brief PORT pin mask */
                                                          /* @} */
 
+/*! @name PORT0_6 (coord C14), P0_6/J23[7]/SW3[3]/SW3[4]
+  @{ */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITPINS_SW3_GPIO GPIO0               /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITPINS_SW3_GPIO_PIN 6U              /*!<@brief GPIO pin number */
+#define BOARD_INITPINS_SW3_GPIO_PIN_MASK (1U << 6U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITPINS_SW3_PORT PORT0               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_SW3_PIN 6U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_SW3_PIN_MASK (1U << 6U)      /*!<@brief PORT pin mask */
+                                                    /* @} */
+
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
  *

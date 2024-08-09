@@ -3,4 +3,4 @@ D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_httpsrv_bm\drivers/fsl_
 D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_httpsrv_bm\drivers/fsl_port.h:463:20:PORT_SetPinMux	24	static
 D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_httpsrv_bm\drivers/fsl_port.h:644:20:PORT_DisableEFTDetectInterrupts	16	static
 ../board/pin_mux.c:32:6:BOARD_InitBootPins	8	static
-../board/pin_mux.c:84:6:BOARD_InitPins	64	static
+../board/pin_mux.c:85:6:BOARD_InitPins	72	static
