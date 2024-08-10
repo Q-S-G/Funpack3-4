@@ -1,0 +1,22 @@
+10:47:56 **** Build of configuration Debug for project frdmmcxn947_touch_sensing ****
+make -r -j32 all 
+Building target: frdmmcxn947_touch_sensing.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="frdmmcxn947_touch_sensing.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T frdmmcxn947_touch_sensing_Debug.ld -o "frdmmcxn947_touch_sensing.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_str.o  ./touch/source/xtalk/nt_xtalk.o  ./touch/source/system/nt_system.o ./touch/source/system/nt_system_frmstr.o ./touch/source/system/nt_system_mem.o  ./touch/source/safety/nt_safety.o ./touch/source/safety/nt_safety_crc.o ./touch/source/safety/nt_safety_gpio.o  ./touch/source/modules/nt_module_gpio.o ./touch/source/modules/nt_module_gpioint.o ./touch/source/modules/nt_module_tsi.o ./touch/source/modules/nt_modules.o  ./touch/source/keydetectors/nt_keydetector_afid.o ./touch/source/keydetectors/nt_keydetector_mbw.o ./touch/source/keydetectors/nt_keydetector_safa.o ./touch/source/keydetectors/nt_keydetector_usafa.o  ./touch/source/filters/nt_filters.o  ./touch/source/electrodes/nt_electrodes.o  ./touch/source/drivers/tsi/nt_drv_tsi_common.o ./touch/source/drivers/tsi/nt_drv_tsi_driver.o ./touch/source/drivers/tsi/nt_drv_tsi_v6_driver_specific.o  ./touch/source/controls/nt_control_arotary.o ./touch/source/controls/nt_control_aslider.o ./touch/source/controls/nt_control_keypad.o ./touch/source/controls/nt_control_matrix.o ./touch/source/controls/nt_control_proxi.o ./touch/source/controls/nt_control_rotary.o ./touch/source/controls/nt_control_slider.o ./touch/source/controls/nt_controls.o  ./touch/source/nt.o  ./startup/boot_multicore_slave.o ./startup/startup_mcxn947_cm33_core0.o  ./source/main.o ./source/nt_setup.o ./source/semihost_hardfault.o  ./freemaster/drivers/freemaster_flexcan.o ./freemaster/drivers/freemaster_mcan.o ./freemaster/drivers/freemaster_mscan.o ./freemaster/drivers/freemaster_net_lwip_tcp.o ./freemaster/drivers/freemaster_net_lwip_udp.o ./freemaster/drivers/freemaster_net_segger_rtt.o ./freemaster/drivers/freemaster_serial_lpsci.o ./freemaster/drivers/freemaster_serial_lpuart.o ./freemaster/drivers/freemaster_serial_miniusart.o ./freemaster/drivers/freemaster_serial_uart.o ./freemaster/drivers/freemaster_serial_usart.o ./freemaster/drivers/freemaster_serial_usb.o  ./freemaster/freemaster_appcmd.o ./freemaster/freemaster_can.o ./freemaster/freemaster_net.o ./freemaster/freemaster_pdbdm.o ./freemaster/freemaster_pipes.o ./freemaster/freemaster_protocol.o ./freemaster/freemaster_rec.o ./freemaster/freemaster_scope.o ./freemaster/freemaster_serial.o ./freemaster/freemaster_sha.o ./freemaster/freemaster_tsa.o ./freemaster/freemaster_ures.o ./freemaster/freemaster_utils.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_crc.o ./drivers/fsl_gpio.o ./drivers/fsl_lpflexcomm.o ./drivers/fsl_lpuart.o ./drivers/fsl_reset.o ./drivers/fsl_spc.o ./drivers/fsl_tsi_v6.o  ./device/system_MCXN947_cm33_core0.o  ./component/uart/fsl_adapter_lpuart.o  ./component/lists/fsl_component_generic_list.o  ./board/board.o ./board/clock_config.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+  PROGRAM_FLASH0:       82732 B         1 MB      7.89%
+  PROGRAM_FLASH1:          0 GB         1 MB      0.00%
+            SRAM:       13432 B       384 KB      3.42%
+           SRAMX:          0 GB        96 KB      0.00%
+           SRAMH:          0 GB        32 KB      0.00%
+         USB_RAM:          0 GB         4 KB      0.00%
+Finished building target: frdmmcxn947_touch_sensing.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "frdmmcxn947_touch_sensing.axf"; # arm-none-eabi-objcopy -v -O binary "frdmmcxn947_touch_sensing.axf" "frdmmcxn947_touch_sensing.bin" ; # checksum -p MCXN947 -d "frdmmcxn947_touch_sensing.bin";
+   text	   data	    bss	    dec	    hex	filename
+  82356	    376	  13056	  95788	  1762c	frdmmcxn947_touch_sensing.axf
+ 
+
+10:47:57 Build Finished. 0 errors, 0 warnings. (took 1s.155ms)
+

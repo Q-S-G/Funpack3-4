@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="LWIP_NETIF_EXT_STATUS_CALLBACK"/>
+		<list key="findhistory">
+			<item value="LWIP_NETIF_EXT_STATUS_CALLBACK"/>
+			<item value="tcp_active_pcbs"/>
+			<item value="Input"/>
+			<item value="read"/>
+			<item value="Init"/>
+			<item value="CTIMER0"/>
+			<item value="str_vofa"/>
+			<item value="temp_now"/>
+			<item value="str_send"/>
+			<item value=" off"/>
+			<item value=" on"/>
+			<item value=" 1"/>
+			<item value="off"/>
+			<item value="on"/>
+			<item value="om"/>
+		</list>
+		<list key="replacehistory">
+			<item value="str_send"/>
+			<item value=""/>
+			<item value="temp_here"/>
+			<item value="str_temp"/>
+			<item value=":0"/>
+			<item value=":1"/>
+			<item value="0"/>
+			<item value="1"/>
+			<item value="PRINTF"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="2070"/>
+		<item key="DIALOG_Y_ORIGIN" value="433"/>
+		<item key="DIALOG_WIDTH" value="463"/>
+		<item key="DIALOG_HEIGHT" value="511"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>
+	</section>
+</section>

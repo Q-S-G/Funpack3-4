@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="将资源“frdmmcxn947_lwip_dhcp_bm/source/tcpclient.c”重命名为“tcpecho.c”" description="重命名资源“tcpclient.c”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="source/tcpclient.c" name="tcpecho.c" stamp="1721747354483" updateReferences="true"/>&#x0A;<refactoring comment="将资源“frdmmcxn947_lwip_dhcp_bm/source/tcpclient.h”重命名为“tcpecho.h”" description="重命名资源“tcpclient.h”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="source/tcpclient.h" name="tcpecho.h" stamp="1721747389328" updateReferences="true"/>
+</session>

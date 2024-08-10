@@ -1,0 +1,8 @@
+D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_dhcp_bm\drivers/fsl_gpio.h:358:20:GPIO_PortSet	16	static
+D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_dhcp_bm\drivers/fsl_gpio.h:373:20:GPIO_PortClear	16	static
+../source/user/tcpecho.c:77:15:tcpecho_recv	24	static
+../source/user/tcpecho.c:126:15:tcpecho_accept	24	static
+../source/user/tcpecho.c:134:7:TCP_Touch_Task	24	static
+../source/user/tcpecho.c:148:7:TCP_Key_Task	24	static
+../source/user/tcpecho.c:163:7:TCP_Temp_Task	24	static
+../source/user/tcpecho.c:178:7:TCP_Echo_Init	16	static

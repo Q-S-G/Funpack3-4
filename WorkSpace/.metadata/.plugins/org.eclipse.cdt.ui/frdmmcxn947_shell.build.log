@@ -1,0 +1,22 @@
+10:47:54 **** Build of configuration Debug for project frdmmcxn947_shell ****
+make -r -j32 all 
+Building target: frdmmcxn947_shell.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="frdmmcxn947_shell.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T frdmmcxn947_shell_Debug.ld -o "frdmmcxn947_shell.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_shell.o ./utilities/fsl_str.o  ./startup/boot_multicore_slave.o ./startup/startup_mcxn947_cm33_core0.o  ./source/semihost_hardfault.o ./source/shell.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_gpio.o ./drivers/fsl_lpflexcomm.o ./drivers/fsl_lpuart.o ./drivers/fsl_reset.o ./drivers/fsl_spc.o  ./device/system_MCXN947_cm33_core0.o  ./component/uart/fsl_adapter_lpuart.o  ./component/serial_manager/fsl_component_serial_manager.o ./component/serial_manager/fsl_component_serial_port_uart.o  ./component/lists/fsl_component_generic_list.o  ./board/board.o ./board/clock_config.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+  PROGRAM_FLASH0:       23284 B         1 MB      2.22%
+  PROGRAM_FLASH1:          0 GB         1 MB      0.00%
+            SRAM:        9312 B       384 KB      2.37%
+           SRAMX:          0 GB        96 KB      0.00%
+           SRAMH:          0 GB        32 KB      0.00%
+         USB_RAM:          0 GB         4 KB      0.00%
+Finished building target: frdmmcxn947_shell.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "frdmmcxn947_shell.axf"; # arm-none-eabi-objcopy -v -O binary "frdmmcxn947_shell.axf" "frdmmcxn947_shell.bin" ; # checksum -p MCXN947 -d "frdmmcxn947_shell.bin";
+   text	   data	    bss	    dec	    hex	filename
+  23200	     84	   9228	  32512	   7f00	frdmmcxn947_shell.axf
+ 
+
+10:47:55 Build Finished. 0 errors, 0 warnings. (took 844ms)
+

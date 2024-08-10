@@ -1,0 +1,13 @@
+D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_dhcp_bm\component\phy/fsl_phy.h:200:24:PHY_Init	16	static
+D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_dhcp_bm\component\phy/fsl_phy.h:292:24:PHY_GetLinkStatus	16	static
+D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_dhcp_bm\component\phy/fsl_phy.h:309:24:PHY_GetLinkSpeedDuplex	24	static
+../lwip/port/ethernetif.c:181:6:ethernetif_phy_init	40	static
+../lwip/port/ethernetif.c:201:13:fetch_received_pkts	24	static
+../lwip/port/ethernetif.c:267:6:ethernetif_input	16	static
+../lwip/port/ethernetif.c:294:7:ethernetif_init	24	static
+../lwip/port/ethernetif.c:425:6:ethernetif_probe_link	32	static
+../lwip/port/ethernetif.c:456:13:probe_link_cyclic	16	static
+../lwip/port/ethernetif.c:478:12:ethernetif_wait_linkup	16	static
+../lwip/port/ethernetif.c:483:12:ethernetif_wait_linkup_array	40	static
+../lwip/port/ethernetif.c:601:12:ethernetif_wait_ipv4_valid	32	static
+../lwip/port/ethernetif.c:743:6:ethernetif_pbuf_free_safe	24	static

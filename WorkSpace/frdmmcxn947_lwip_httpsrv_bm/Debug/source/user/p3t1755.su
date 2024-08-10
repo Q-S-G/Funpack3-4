@@ -1,0 +1,6 @@
+../source/user/p3t1755.c:29:13:i3c_master_callback	24	static
+../source/user/p3t1755.c:39:10:I3C_WriteSensor	64	static
+../source/user/p3t1755.c:80:10:I3C_ReadSensor	64	static
+../source/user/p3t1755.c:121:10:p3t1755_set_dynamic_address	48	static
+../source/user/p3t1755.c:167:6:p3t1755_Init	48	static
+../source/user/p3t1755.c:206:8:temperature_read	8	static

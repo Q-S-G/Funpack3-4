@@ -1,0 +1,22 @@
+10:47:43 **** Build of configuration Debug for project MCXN947_Project ****
+make -r -j32 all 
+Building target: MCXN947_Project.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MCXN947_Project.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T MCXN947_Project_Debug.ld -o "MCXN947_Project.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_str.o  ./startup/boot_multicore_slave.o ./startup/startup_mcxn947_cm33_core0.o  ./source/MCXN947_Project.o ./source/semihost_hardfault.o  ./phy/fsl_phylan8741.o  ./lwip/src/netif/ppp/auth.o ./lwip/src/netif/ppp/ccp.o ./lwip/src/netif/ppp/chap-md5.o ./lwip/src/netif/ppp/chap-new.o ./lwip/src/netif/ppp/chap_ms.o ./lwip/src/netif/ppp/demand.o ./lwip/src/netif/ppp/eap.o ./lwip/src/netif/ppp/ecp.o ./lwip/src/netif/ppp/eui64.o ./lwip/src/netif/ppp/fsm.o ./lwip/src/netif/ppp/ipcp.o ./lwip/src/netif/ppp/ipv6cp.o ./lwip/src/netif/ppp/lcp.o ./lwip/src/netif/ppp/magic.o ./lwip/src/netif/ppp/mppe.o ./lwip/src/netif/ppp/multilink.o ./lwip/src/netif/ppp/ppp.o ./lwip/src/netif/ppp/pppapi.o ./lwip/src/netif/ppp/pppcrypt.o ./lwip/src/netif/ppp/pppoe.o ./lwip/src/netif/ppp/pppol2tp.o ./lwip/src/netif/ppp/pppos.o ./lwip/src/netif/ppp/upap.o ./lwip/src/netif/ppp/utils.o ./lwip/src/netif/ppp/vj.o  ./lwip/src/netif/bridgeif.o ./lwip/src/netif/bridgeif_fdb.o ./lwip/src/netif/ethernet.o ./lwip/src/netif/lowpan6.o ./lwip/src/netif/lowpan6_ble.o ./lwip/src/netif/lowpan6_common.o ./lwip/src/netif/slipif.o ./lwip/src/netif/zepif.o  ./lwip/src/core/ipv6/dhcp6.o ./lwip/src/core/ipv6/ethip6.o ./lwip/src/core/ipv6/icmp6.o ./lwip/src/core/ipv6/inet6.o ./lwip/src/core/ipv6/ip6.o ./lwip/src/core/ipv6/ip6_addr.o ./lwip/src/core/ipv6/ip6_frag.o ./lwip/src/core/ipv6/mld6.o ./lwip/src/core/ipv6/nd6.o  ./lwip/src/core/ipv4/acd.o ./lwip/src/core/ipv4/autoip.o ./lwip/src/core/ipv4/dhcp.o ./lwip/src/core/ipv4/etharp.o ./lwip/src/core/ipv4/icmp.o ./lwip/src/core/ipv4/igmp.o ./lwip/src/core/ipv4/ip4.o ./lwip/src/core/ipv4/ip4_addr.o ./lwip/src/core/ipv4/ip4_frag.o  ./lwip/src/core/altcp.o ./lwip/src/core/altcp_alloc.o ./lwip/src/core/altcp_tcp.o ./lwip/src/core/def.o ./lwip/src/core/dns.o ./lwip/src/core/inet_chksum.o ./lwip/src/core/init.o ./lwip/src/core/ip.o ./lwip/src/core/mem.o ./lwip/src/core/memp.o ./lwip/src/core/netif.o ./lwip/src/core/pbuf.o ./lwip/src/core/raw.o ./lwip/src/core/stats.o ./lwip/src/core/sys.o ./lwip/src/core/tcp.o ./lwip/src/core/tcp_in.o ./lwip/src/core/tcp_out.o ./lwip/src/core/timeouts.o ./lwip/src/core/udp.o  ./lwip/src/api/api_lib.o ./lwip/src/api/api_msg.o ./lwip/src/api/err.o ./lwip/src/api/if_api.o ./lwip/src/api/netbuf.o ./lwip/src/api/netdb.o ./lwip/src/api/netifapi.o ./lwip/src/api/sockets.o ./lwip/src/api/tcpip.o  ./lwip/port/enet_ethernetif.o ./lwip/port/enet_ethernetif_lpc.o ./lwip/port/ethernetif.o ./lwip/port/ethernetif_mmac.o ./lwip/port/sys_arch.o  ./drivers/flash/src/fsl_flash.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_enet.o ./drivers/fsl_gpio.o ./drivers/fsl_lpflexcomm.o ./drivers/fsl_lpuart.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_spc.o ./drivers/fsl_vbat.o  ./device/system_MCXN947_cm33_core0.o  ./component/uart/fsl_adapter_lpuart.o  ./component/silicon_id/fsl_silicon_id.o  ./component/serial_manager/fsl_component_serial_manager.o ./component/serial_manager/fsl_component_serial_port_uart.o  ./component/lists/fsl_component_generic_list.o  ./component/gpio/fsl_adapter_gpio.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+  PROGRAM_FLASH0:       85112 B         1 MB      8.12%
+  PROGRAM_FLASH1:          0 GB         1 MB      0.00%
+            SRAM:       58560 B       384 KB     14.89%
+           SRAMX:          0 GB        96 KB      0.00%
+           SRAMH:          0 GB        32 KB      0.00%
+         USB_RAM:          0 GB         4 KB      0.00%
+Finished building target: MCXN947_Project.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MCXN947_Project.axf"; # arm-none-eabi-objcopy -v -O binary "MCXN947_Project.axf" "MCXN947_Project.bin" ; # checksum -p MCXN947 -d "MCXN947_Project.bin";
+   text	   data	    bss	    dec	    hex	filename
+  85084	     28	  58528	 143640	  23118	MCXN947_Project.axf
+ 
+
+10:47:44 Build Finished. 0 errors, 0 warnings. (took 1s.401ms)
+

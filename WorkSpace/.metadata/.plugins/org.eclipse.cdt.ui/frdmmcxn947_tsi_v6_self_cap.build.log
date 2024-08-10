@@ -1,0 +1,22 @@
+10:47:58 **** Build of configuration Debug for project frdmmcxn947_tsi_v6_self_cap ****
+make -r -j32 all 
+Building target: frdmmcxn947_tsi_v6_self_cap.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -no-warn-rwx-segments -Xlinker -Map="frdmmcxn947_tsi_v6_self_cap.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T frdmmcxn947_tsi_v6_self_cap_Debug.ld -o "frdmmcxn947_tsi_v6_self_cap.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_memcpy.o ./utilities/fsl_str.o  ./startup/boot_multicore_slave.o ./startup/startup_mcxn947_cm33_core0.o  ./source/semihost_hardfault.o ./source/tsi_v6_self_cap.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_gpio.o ./drivers/fsl_inputmux.o ./drivers/fsl_lpflexcomm.o ./drivers/fsl_lptmr.o ./drivers/fsl_lpuart.o ./drivers/fsl_reset.o ./drivers/fsl_spc.o ./drivers/fsl_tsi_v6.o  ./device/system_MCXN947_cm33_core0.o  ./component/uart/fsl_adapter_lpuart.o  ./component/lists/fsl_component_generic_list.o  ./board/board.o ./board/clock_config.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+  PROGRAM_FLASH0:       18228 B         1 MB      1.74%
+  PROGRAM_FLASH1:          0 GB         1 MB      0.00%
+            SRAM:        8784 B       384 KB      2.23%
+           SRAMX:          0 GB        96 KB      0.00%
+           SRAMH:          0 GB        32 KB      0.00%
+         USB_RAM:          0 GB         4 KB      0.00%
+Finished building target: frdmmcxn947_tsi_v6_self_cap.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "frdmmcxn947_tsi_v6_self_cap.axf"; # arm-none-eabi-objcopy -v -O binary "frdmmcxn947_tsi_v6_self_cap.axf" "frdmmcxn947_tsi_v6_self_cap.bin" ; # checksum -p MCXN947 -d "frdmmcxn947_tsi_v6_self_cap.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18212	     16	   8768	  26996	   6974	frdmmcxn947_tsi_v6_self_cap.axf
+ 
+
+10:47:58 Build Finished. 0 errors, 0 warnings. (took 855ms)
+

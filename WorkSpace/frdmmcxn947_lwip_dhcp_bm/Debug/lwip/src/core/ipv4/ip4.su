@@ -1,0 +1,6 @@
+../lwip/src/core/ipv4/ip4.c:153:1:ip4_route	16	static
+../lwip/src/core/ipv4/ip4.c:409:1:ip4_input_accept	16	static
+../lwip/src/core/ipv4/ip4.c:461:1:ip4_input	40	static
+../lwip/src/core/ipv4/ip4.c:822:1:ip4_output_if	48	static
+../lwip/src/core/ipv4/ip4.c:862:1:ip4_output_if_src	40	static
+../lwip/src/core/ipv4/ip4.c:1063:1:ip4_output	48	static

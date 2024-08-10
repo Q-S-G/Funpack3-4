@@ -1,0 +1,42 @@
+#ifndef P3T1755
+#define P3T1755
+
+/*  Standard C Included Files */
+#include <string.h>
+/*  SDK Included Files */
+#include "fsl_debug_console.h"
+#include "fsl_p3t1755.h"
+#include "fsl_i3c.h"
+#include "pin_mux.h"
+#include "clock_config.h"
+#include "board.h"
+
+/*******************************************************************************
+ * Definitions
+ ******************************************************************************/
+#define EXAMPLE_MASTER             I3C1
+#define I3C_MASTER_CLOCK_FREQUENCY CLOCK_GetI3cClkFreq(1)
+#define SENSOR_SLAVE_ADDR          0x48U
+#define I3C_TIME_OUT_INDEX 100000000U
+
+#define SENSOR_ADDR 0x08U
+#define CCC_RSTDAA  0x06U
+#define CCC_SETDASA 0x87
+
+#ifndef EXAMPLE_I2C_BAUDRATE
+#define EXAMPLE_I2C_BAUDRATE 400000
+#endif
+#ifndef EXAMPLE_I3C_OD_BAUDRATE
+#define EXAMPLE_I3C_OD_BAUDRATE 1500000
+#endif
+#ifndef EXAMPLE_I3C_PP_BAUDRATE
+#define EXAMPLE_I3C_PP_BAUDRATE 4000000
+#endif
+
+status_t I3C_WriteSensor(uint8_t deviceAddress, uint32_t regAddress, uint8_t *regData, size_t dataSize);
+status_t I3C_ReadSensor(uint8_t deviceAddress, uint32_t regAddress, uint8_t *regData, size_t dataSize);
+status_t p3t1755_set_dynamic_address(void);
+void p3t1755_Init(void);
+double temperature_read(void);
+
+#endif

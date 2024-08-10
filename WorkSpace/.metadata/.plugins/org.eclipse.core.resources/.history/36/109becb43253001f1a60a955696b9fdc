@@ -1,0 +1,104 @@
+#include "tsi_v6.h"
+
+/*******************************************************************************
+ * Variables
+ ******************************************************************************/
+tsi_calibration_data_t buffer;
+static volatile bool s_tsiInProgress = true;
+/* Array of TSI peripheral base address. */
+#if defined(TSI0)
+#define APP_TSI TSI0
+#elif defined(TSI)
+#define APP_TSI TSI
+#endif
+
+int touch_flag = 0;
+
+/*******************************************************************************
+ * Code
+ ******************************************************************************/
+void TSI0_IRQHandler(void)
+{
+#if BOARD_TSI_ELECTRODE_1 > 15
+    /* errata ERR051410: When reading TSI_COMFIG[TSICH] bitfield, the upper most bit will always be 0. */
+    if ((TSI_GetSelfCapMeasuredChannel(APP_TSI) | 0x10U) == BOARD_TSI_ELECTRODE_1)
+#else
+    if (TSI_GetSelfCapMeasuredChannel(APP_TSI) == BOARD_TSI_ELECTRODE_1)
+#endif
+    {
+        if (TSI_GetCounter(APP_TSI) > (uint16_t)(buffer.calibratedData[BOARD_TSI_ELECTRODE_1] + TOUCH_DELTA_VALUE))
+        {
+        	touch_flag = 1;
+            s_tsiInProgress = false;
+        }
+    }
+
+    /* Clear endOfScan flag */
+    TSI_ClearStatusFlags(APP_TSI, kTSI_EndOfScanFlag);
+    SDK_ISR_EXIT_BARRIER;
+}
+
+void Tsi_Init(void)
+{
+	volatile uint32_t i = 0;
+	tsi_selfCap_config_t tsiConfig_selfCap;
+	lptmr_config_t lptmrConfig;
+	memset((void *)&lptmrConfig, 0, sizeof(lptmrConfig));
+
+    /* attach FRO 12M to FLEXCOMM4 (debug console) */
+    CLOCK_SetClkDiv(kCLOCK_DivFlexcom4Clk, 1u);
+
+    /* Enables the clk_16k[1] */
+    CLOCK_SetupClk16KClocking(kCLOCK_Clk16KToVsys);
+    /* attach FRO HF to SCT */
+    CLOCK_SetClkDiv(kCLOCK_DivTsiClk, 1u);
+    CLOCK_AttachClk(kCLK_IN_to_TSI);
+
+    /* Configure LPTMR */
+    LPTMR_GetDefaultConfig(&lptmrConfig);
+    /* TSI default hardware configuration for self-cap mode */
+    TSI_GetSelfCapModeDefaultConfig(&tsiConfig_selfCap);
+
+    /* Initialize the LPTMR */
+    LPTMR_Init(LPTMR0, &lptmrConfig);
+    /* Initialize the TSI */
+    TSI_InitSelfCapMode(APP_TSI, &tsiConfig_selfCap);
+    /* Enable noise cancellation function */
+    TSI_EnableNoiseCancellation(APP_TSI, true);
+
+    /* Set timer period */
+    LPTMR_SetTimerPeriod(LPTMR0, USEC_TO_COUNT(LPTMR_USEC_COUNT, LPTMR_SOURCE_CLOCK));
+
+    NVIC_EnableIRQ(TSI0_IRQn);
+    TSI_EnableModule(APP_TSI, true); /* Enable module */
+
+    /*********  CALIBRATION PROCESS ************/
+    memset((void *)&buffer, 0, sizeof(buffer));
+    TSI_SelfCapCalibrate(APP_TSI, &buffer);
+    /* Print calibrated counter values */
+    for (i = 0U; i < FSL_FEATURE_TSI_CHANNEL_COUNT; i++)
+    {
+        PRINTF("Calibrated counters for channel %d is: %d \r\n", i, buffer.calibratedData[i]);
+    }
+    PRINTF("\r\nNOW, comes to the software trigger scan using interrupt method!\r\n");
+       TSI_EnableInterrupts(APP_TSI, kTSI_GlobalInterruptEnable);
+       TSI_EnableInterrupts(APP_TSI, kTSI_EndOfScanInterruptEnable);
+       TSI_ClearStatusFlags(APP_TSI, kTSI_EndOfScanFlag);
+       TSI_SetSelfCapMeasuredChannel(APP_TSI, BOARD_TSI_ELECTRODE_1);
+
+       while (s_tsiInProgress)
+       {
+           TSI_StartSoftwareTrigger(APP_TSI);
+       }
+       s_tsiInProgress = true;
+       PRINTF("Channel %d Normal mode counter is: %d \r\n", BOARD_TSI_ELECTRODE_1, TSI_GetCounter(APP_TSI));
+   #if (defined(PAD_TSI_ELECTRODE_2_ENABLED) && PAD_TSI_ELECTRODE_2_ENABLED)
+       TSI_SetSelfCapMeasuredChannel(APP_TSI, BOARD_TSI_ELECTRODE_2);
+       TSI_StartSoftwareTrigger(APP_TSI);
+       while (s_tsiInProgress)
+       {
+           TSI_StartSoftwareTrigger(APP_TSI);
+       }
+       PRINTF("Channel %d Normal mode counter is: %d \r\n", BOARD_TSI_ELECTRODE_2, TSI_GetCounter(APP_TSI));
+   #endif
+}

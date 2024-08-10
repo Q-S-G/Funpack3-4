@@ -1,0 +1,10 @@
+D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_dhcp_bm\drivers/fsl_clock.h:1394:20:CLOCK_EnableClock	24	static
+D:\Documents\MCUXpressoIDE_11.10.0_3148\frdmmcxn947_lwip_dhcp_bm\drivers/fsl_gpio.h:329:20:GPIO_PinWrite	24	static
+../source/lwip_dhcp_bm.c:87:13:MDIO_Init	8	static
+../source/lwip_dhcp_bm.c:93:17:MDIO_Write	16	static
+../source/lwip_dhcp_bm.c:98:17:MDIO_Read	16	static
+../source/lwip_dhcp_bm.c:107:13:linkStatusCallback	32	static
+../source/lwip_dhcp_bm.c:156:6:SysTick_Handler	8	static
+../source/lwip_dhcp_bm.c:161:6:Led_Init	8	static
+../source/lwip_dhcp_bm.c:173:13:print_dhcp_state	24	static
+../source/lwip_dhcp_bm.c:241:5:main	104	static

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“frdmmcxn947_touch_sensing/doc/readme.txt”重命名为“readme.md”" description="重命名资源“readme.txt”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="doc/readme.txt" name="readme.md" stamp="1722752794430" updateReferences="true"/>
+</session>
